@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  padding: 5px;
+  min-width: 25vh;
+  background-color: black;
+}
+.right {
+  width: 75vw;
+  position: relative;
+}
+.home ul li {
+  width: 15px;
+  list-style: none;
+  gap: 15px;
+  display: flex;
+  padding-top: 14px;
+}
+.pointer {
+  cursor: pointer;
+}
+.bg-grey {
+  background-color: #121212;
+}
+.m-1 {
+  margin: 3px;
+}
+.heading {
+  width: 100%;
+  gap: 15px;
+  display: flex;
+  padding-top: 14px;
+  align-items: center;
+}
+.heading img {
+  width: 20px;
+}
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 22px;
+  padding-left: 15px;
+  line-height: 1.5rem;
+}
+
+.footer a {
+  color: gray;
+  text-decoration: none;
+}
+
+.library {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 8px;
+  margin-left: 0;
+  align-items: center;
+}
+.buttons {
+  gap: 15px;
+}
+.nav {
+  gap: 13px;
+}
+.spotifyPlalists {
+  padding: 16px;
+}
+.cardContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+  cursor: pointer;
+}
+.card .cardImage {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card > * {
+  padding-top: 10px;
+}
+
+.card:hover {
+  background-color: gray;
+}
+
+.hoverplay {
+  position: absolute;
+  z-index: 10;
+  top: 230px;
+  right: 18px;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.card:hover .hoverplay {
+  animation: fadeIn 0.2s forwards;
+}
+@keyframes fadeIn {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 180px;
+  }
+}
+
+.signupbtn {
+  background-color: #121212;
+  color: gray;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  transition: color;
+}
+
+.signupbtn:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.loginbtn {
+  font-weight: 500;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  transition: trasnform;
+}
+.loginbtn:hover {
+  font-weight: 700;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.buttons {
+  padding-right: 25px;
+}
+.playbar {
+  position: fixed;
+  bottom: 30px;
+  width: 73%;
+  background-color: rgb(55, 55, 55);
+  padding: 12px;
+  border-radius: 10px;
+  height: 40px;
+  display: grid;
+}
+
+.invert {
+  filter: invert(1);
+}
+.songsbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.songsbutton img {
+  cursor: pointer;
+}
+.songList {
+  height: 550px;
+  overflow: auto;
+  margin-bottom: 44px 0;
+}
+.songList ul {
+  padding: 12px;
+}
+.songList ul li {
+  list-style: none;
+  list-style-type: decimal;
+  display: flex;
+  gap: 12px;
+  border: 1px solid white;
+  margin: 12px;
+  padding: 15px;
+  border-radius: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.playnow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playnow span {
+  font-size: 15px;
+  width: 64px;
+  padding: 12px;
+}
+.info {
+  font-size: 13px;
+  width: 344px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.seekBar {
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  width: 98%;
+  height: 4px;
+  right: 14px;
+  cursor: pointer;
+}
+.circle {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0%;
+  bottom: -5px;
+  transition: left 0.5s;
+}
+.aboveBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+.hamburger {
+  display: none;
+}
+.songinfo {
+  width: 150px;
+}
+.volume {
+  display: flex;
+  margin-bottom: 4px;
+  gap: 2px;
+}
+.volume img {
+  width: 25px;
+  cursor: pointer;
+}
+
+input[type="range"].range {
+  -webkit-appearance: none; /* Hides the slider so that custom styles can be added */
+  appearance: none;
+  width: 100%; /* Full-width */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+/* The track */
+input[type="range"].range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px; /* Track height */
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ddd; /* Track color */
+  border-radius: 5px; /* Track radius */
+  border: 1px solid #aaa; /* Track border */
+}
+
+input[type="range"].range::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ddd;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+input[type="range"].range::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* The thumb */
+input[type="range"].range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; /* Reduced Thumb height */
+  height: 16px; /* Reduced Thumb width */
+  background: #000; /* Black */
+  cursor: pointer;
+  border-radius: 50%; /* Round thumb */
+  border: 2px solid #000; /* Thumb border */
+  margin-top: -5px; /* Center the thumb on the track */
+}
+
+input[type="range"].range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+input[type="range"].range::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+/* Focus styling */
+input[type="range"].range:focus {
+  outline: none; /* Removes the blue border. You should use :focus-visible instead to make the outline visible when using a keyboard */
+}
+
+input[type="range"].range:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
+input[type="range"].range:focus::-moz-range-track {
+  background: #ccc;
+}
+
+input[type="range"].range:focus::-ms-track {
+  background: #ccc;
+}
+
+/* Active styling */
+input[type="range"].range::-webkit-slider-thumb:active {
+  background: #333; /* Darker black when active */
+}
+
+input[type="range"].range::-moz-range-thumb:active {
+  background: #333;
+}
+
+input[type="range"].range::-ms-thumb:active {
+  background: #333;
+}
+@media (max-width: 1330px) {
+  .left {
+    position: absolute;
+    left: -100%;
+    z-index: 10;
+    width: 330px;
+    transition: all 0.3s;
+  }
+  .right {
+    width: 100vw;
+  }
+  .playbar {
+    width: 97%;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .card {
+    width: 26vw;
+  }
+  .hoverplay {
+    opacity: 0;
+  }
+}
+@media (max-width: 550px) {
+  .cardContainer {
+    justify-content: center;
+    padding: 0;
+  }
+  .card {
+    width: 90vw;
+    border-radius: 10px;
+  }
+  .aboveBar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .playbar {
+    height: 125px;
+    width: 94%;
+    left: 2px;
+  }
+  .seekBar {
+    left: 2px;
+  }
+  .songinfo {
+    width: auto;
+  }
+  .songbtnvol {
+    flex-direction: column;
+  }
+  .hoverplay {
+    opacity: 0;
+  }
+}
+@media (max-width: 840px) {
+  .cardContainer {
+    justify-content: center;
+    padding: 0;
+  }
+}

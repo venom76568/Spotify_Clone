@@ -1,0 +1,6 @@
+<svg width="41" height="40" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green circular background -->
+  <circle cx="12.5" cy="12.5" r="12.5" fill="rgb(81, 240, 13)"/>
+  <!-- Play button -->
+  <path d="M10 17.5V7.5L17.5 12.5L10 17.5Z" fill="black" stroke="#141B34" stroke-width="1" stroke-linejoin="round"/>
+</svg>
